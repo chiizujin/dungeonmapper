@@ -1,0 +1,237 @@
+object MainForm: TMainForm
+  Left = 17
+  Height = 626
+  Top = 18
+  Width = 1158
+  Caption = 'DungeonMapper'
+  ClientHeight = 626
+  ClientWidth = 1158
+  OnChangeBounds = FormChangeBounds
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnKeyDown = FormKeyDown
+  OnMouseDown = FormMouseDown
+  OnMouseMove = FormMouseMove
+  OnMouseUp = FormMouseUp
+  OnMouseWheelDown = FormMouseWheelDown
+  OnMouseWheelUp = FormMouseWheelUp
+  OnPaint = FormPaint
+  Position = poDefault
+  LCLVersion = '2.2.6.0'
+  object ToolBar: TPanel
+    Left = 0
+    Height = 74
+    Top = 0
+    Width = 1158
+    Align = alTop
+    BevelOuter = bvSpace
+    ClientHeight = 74
+    ClientWidth = 1158
+    Font.Height = -16
+    Font.Name = 'Sans'
+    ParentFont = False
+    TabOrder = 0
+    object PanelLine: TPanel
+      Left = 1
+      Height = 2
+      Top = 71
+      Width = 1156
+      Align = alBottom
+      BevelOuter = bvLowered
+      TabOrder = 4
+    end
+    object LabelGridSize: TLabel
+      Left = 6
+      Height = 19
+      Top = 44
+      Width = 73
+      Caption = '&Grid size:'
+      FocusControl = SpinGridSize
+      ParentColor = False
+    end
+    object SpinGridSize: TSpinEdit
+      Left = 85
+      Height = 29
+      Top = 39
+      Width = 60
+      Increment = 3
+      MaxValue = 200
+      MinValue = 30
+      OnChange = SpinGridSizeChange
+      TabOrder = 3
+      Value = 50
+    end
+    object LabelPosition: TLabel
+      Left = 977
+      Height = 19
+      Top = 44
+      Width = 104
+      Caption = 'LabelPosition'
+      ParentColor = False
+    end
+    object ColorButtonLeft: TColorButton
+      Left = 159
+      Height = 29
+      Top = 39
+      Width = 104
+      BorderWidth = 2
+      ButtonColorSize = 16
+      ButtonColor = clMoneyGreen
+      Caption = 'L'
+    end
+    object ColorButtonRight: TColorButton
+      Left = 271
+      Height = 29
+      Top = 39
+      Width = 104
+      BorderWidth = 2
+      ButtonColorSize = 16
+      ButtonColor = clSkyBlue
+      Caption = 'R'
+    end
+    object ComboGroups: TComboBox
+      Left = 65
+      Height = 33
+      Top = 2
+      Width = 334
+      ItemHeight = 0
+      OnChange = ComboGroupsChange
+      OnDropDown = ComboGroupsDropDown
+      Sorted = True
+      Style = csDropDownList
+      TabOrder = 1
+    end
+    object LabelGroup: TLabel
+      Left = 6
+      Height = 19
+      Top = 6
+      Width = 53
+      Caption = 'Group:'
+      ParentColor = False
+    end
+    object LabelMap: TLabel
+      Left = 507
+      Height = 19
+      Top = 6
+      Width = 39
+      Caption = 'Map:'
+      ParentColor = False
+    end
+    object ComboMaps: TComboBox
+      Left = 553
+      Height = 33
+      Top = 2
+      Width = 431
+      ItemHeight = 0
+      OnChange = ComboMapsChange
+      OnDropDown = ComboMapsDropDown
+      Sorted = True
+      Style = csDropDownList
+      TabOrder = 2
+    end
+    object ButtonCreateGroup: TSpeedButton
+      Left = 402
+      Height = 30
+      Hint = 'Create group'
+      Top = 2
+      Width = 31
+      Caption = '+'
+      OnClick = ButtonCreateGroupClick
+      ShowHint = True
+      ParentShowHint = False
+    end
+    object ButtonRenameGroup: TSpeedButton
+      Left = 434
+      Height = 30
+      Hint = 'Rename group'
+      Top = 2
+      Width = 31
+      Caption = '...'
+      OnClick = ButtonRenameGroupClick
+      ShowHint = True
+      ParentShowHint = False
+    end
+    object ButtonDeleteGroup: TSpeedButton
+      Left = 466
+      Height = 30
+      Hint = 'Delete group'
+      Top = 2
+      Width = 31
+      Caption = '-'
+      OnClick = ButtonDeleteGroupClick
+      ShowHint = True
+      ParentShowHint = False
+    end
+    object ButtonCreateMap: TSpeedButton
+      Left = 987
+      Height = 30
+      Hint = 'Create map'
+      Top = 2
+      Width = 31
+      Caption = '+'
+      OnClick = ButtonCreateMapClick
+      ShowHint = True
+      ParentShowHint = False
+    end
+    object ButtonRenameMap: TSpeedButton
+      Left = 1019
+      Height = 30
+      Hint = 'Rename map'
+      Top = 2
+      Width = 31
+      Caption = '...'
+      OnClick = ButtonRenameMapClick
+      ShowHint = True
+      ParentShowHint = False
+    end
+    object ButtonDeleteMap: TSpeedButton
+      Left = 1051
+      Height = 30
+      Hint = 'Delete map'
+      Top = 2
+      Width = 31
+      Caption = '-'
+      OnClick = ButtonDeleteMapClick
+      ShowHint = True
+      ParentShowHint = False
+    end
+    object ButtonResetMap: TSpeedButton
+      Left = 944
+      Height = 30
+      Hint = 'Reset map position'
+      Top = 38
+      Width = 31
+      Caption = 'x'
+      OnClick = ButtonResetMapClick
+      ShowHint = True
+      ParentShowHint = False
+    end
+    object LabelText: TLabel
+      Left = 391
+      Height = 19
+      Top = 44
+      Width = 37
+      Caption = '&Text:'
+      FocusControl = EditText
+      ParentColor = False
+    end
+    object EditText: TEdit
+      Left = 433
+      Height = 29
+      Top = 39
+      Width = 495
+      TabOrder = 0
+    end
+    object ButtonAbout: TSpeedButton
+      Left = 1112
+      Height = 30
+      Hint = 'About'
+      Top = 2
+      Width = 31
+      Caption = '?'
+      OnClick = ButtonAboutClick
+      ShowHint = True
+      ParentShowHint = False
+    end
+  end
+end
